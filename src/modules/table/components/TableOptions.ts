@@ -131,7 +131,7 @@ export class ColumnOptions{
    * 是否排序
    * @type {boolean}
    */
-  sortable?: boolean=false;
+  sortable?: boolean = false;
 
   /**
    * 构造函数，对象转类型

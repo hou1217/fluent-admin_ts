@@ -21,7 +21,7 @@ export class FormItemFactory{
    * @param {string} type 类型
    * @param {{Vue}} component Vue组件需要有props:{params},并且有on-change事件用于抛出更改的值
    */
-  static register(type:string, component:any){
+  static register(type: string, component: any){
     FormItemFactory.items[type] = component;
   }
   
@@ -29,7 +29,7 @@ export class FormItemFactory{
    * 根据类型获取组件
    * @param {string} type 
    */
-  static get(type:string){
+  static get(type: string){
 
     let component = FormItemFactory.items[type];
     if(!component){

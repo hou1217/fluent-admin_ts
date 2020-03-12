@@ -1,5 +1,8 @@
 import {FormType} from '../FormItemFactory'
-
+// interface 
+export interface changeFunc{
+  (newValue: string): void
+}
 /**
  * 表单选项
  */
@@ -24,29 +27,26 @@ export class FormOptions{
     Object.assign(this, obj);
   }
 }
-// interface 
-export interface changeFunc{
-  (newValue: string): void
-}
+
 
 export class FormItemOptions{
 
   /**
    * 元素类型,默认支持类型详见FormItemFactory.FormType
    */
-  type = FormType.TEXT;
+  type:string = FormType.TEXT;
   /**
    * 组
    */
-  group = "";
+  group: string = "";
   /**
    * 标签
    */
-  label = "";
+  label: string = "";
   /**
    * 绑定的变量名
    */
-  name = "";
+  name: string = "";
   /**
    * 当有组的时候，存在
    * @type {Array<FormItemOptions>}

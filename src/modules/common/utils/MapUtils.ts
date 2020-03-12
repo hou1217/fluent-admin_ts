@@ -9,12 +9,12 @@ export default class MapUtils{
    * @param {string} name 可以是多级嵌套key
    * @param {*} 需要设置的值
    */
-  static setNestValue(map:any, name:string, value:any){
+  static setNestValue(map: any, name: string, value: any){
 
     let container = map;
     let itemNames = name.split(".");
     let len = itemNames.length;
-    itemNames.forEach((name:string, index:number) => {
+    itemNames.forEach((name: string, index: number) => {
       if(index < (len - 1)){
         container[name] =  container[name] || {}
         container = container[name]; 
@@ -29,12 +29,12 @@ export default class MapUtils{
    * @param {*} map 
    * @param {string} name 
    */
-  static getNestValue(map:any, name:string){
+  static getNestValue(map: any, name: string){
 
     let container = map;
     let itemNames = name.split(".");
     let len = itemNames.length;
-    itemNames.forEach((name:string, index:number) => {
+    itemNames.forEach((name: string, index: number) => {
       if(index < (len - 1)){
         container = container[name] || {}; 
       }

@@ -184,17 +184,17 @@ export default Vue.extend({
     }
   },
   methods:{
-    calColumnWidth(column:any){
+    calColumnWidth(column: any): number{
 
       let size = column.size || 1;
       return this.sizeWidth * size;
     },
-    onSelectionChange(rows:any){
+    onSelectionChange(rows: any): void{
       this.selection = rows;
       //this.selectionColumn && this.selectionColumn.handler && this.selectionColumn.handler(rows);
       this.$emit("on-select", this.selection);
     },
-    onBtnClick(btn:any, row:any){
+    onBtnClick(btn: any, row: any): void{
       if(btn.tips){
         this.$confirm(btn.tips, '提示', {
           confirmButtonText: '确定',
@@ -228,7 +228,7 @@ export default Vue.extend({
     onSearch(){
       //搜索字段映射处理
       let customForm = {};
-      this.options.searches.forEach((search:any, index:number) => {
+      this.options.searches.forEach((search: any, index: number) => {
         customForm[search.name] = this.customSearchForm['$' + index] || null;
       });
       this.searchForm.page = 1;
@@ -239,7 +239,7 @@ export default Vue.extend({
     /**
      * 页请求数量改变
      */
-    onPageSizeChange(pageSize){
+    onPageSizeChange(pageSize: number): void{
       
       this.searchForm.pageSize = pageSize;
       this.refreshTableData();
@@ -247,7 +247,7 @@ export default Vue.extend({
     /**
      * 页码改变
      */
-    onPageChange(page){
+    onPageChange(page: number): void{
       
       this.searchForm.page = page;
       this.refreshTableData();
@@ -277,7 +277,7 @@ export default Vue.extend({
     /**
      * 排序改变
      */
-    onSortChange(sort){
+    onSortChange(sort: any): void{
       // console.log("[table.vue]sort: %o", sort);
       this.searchForm.sortField = sort.order ? sort.prop : "";
       this.searchForm.reverse = (sort.order === 'descending');

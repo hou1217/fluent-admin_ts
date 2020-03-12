@@ -18,7 +18,7 @@ import Vue from 'vue';
 import {ModalOptions} from './ModalOptions'
 export default Vue.extend({
   props:{
-    options: {type: [ModalOptions,Object]}
+    options: {type: [ModalOptions]}
   },
   data(){
     return {

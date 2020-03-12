@@ -55,7 +55,7 @@ export default Vue.extend({
     }
   },
   computed: {
-    showButton():boolean {
+    showButton(): boolean {
       let show = Object.keys(this.options).indexOf('showButton') < 0 || this.options.showButton;
       return show;
     }
