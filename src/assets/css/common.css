@@ -1,0 +1,119 @@
+/*VUE page 自定义的通用CSS */
+li,ol{
+  list-style: none;
+}
+div{
+  box-sizing:border-box;
+}
+.cell a,span a{
+  color: #409EFF;
+}
+.w100{
+  width: 100%;
+}
+.handle-input {
+  width: 200px;
+  display: inline-block;
+}
+.handle-box {
+  margin-bottom: 20px;
+}
+.handle-box2{
+margin-top: 20px;
+}
+.handle-select {
+  width: 120px;
+}
+
+
+
+/* 改写element-ui */
+.el-button--text{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.el-table .cell{
+  line-height: 20px;
+}
+.el-table .caret-wrapper{
+  height: 20px;
+}
+.el-table .sort-caret.ascending{
+  top: -1px;
+}
+.el-table .sort-caret.descending{
+  bottom: -1px;
+}
+/* 解决element-ui中table表头错位问题 */
+.el-table th.gutter{
+  display: table-cell!important;
+}
+
+.el-table colgroup.gutter{
+  display: table-cell!important;
+}
+/* 改写默认的css */
+.collapseBoard .el-collapse-item__header,
+.collapseBoard .el-collapse-item__content{
+  padding-left: 20px;
+}
+.el-table .cell{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap !important;
+  text-overflow: ellipsis;
+}
+
+.el-step__head {
+  display: flex;
+  align-items: center;
+}
+.el-step__title {
+  display: flex;
+  height: 32px;
+  align-items: center;
+}
+.el-step__main {
+  height: 32px;
+}
+.el-input-number.is-controls-right .el-input__inner {
+  padding-left: 1px !important;
+  padding-right: 30px !important;
+}
+
+.el-dropdown{
+  color: #409EFF !important;
+  margin-left: 10px;
+  font-size: 12px !important;  
+}
+.el-popover{
+  overflow: hidden;
+  max-width:500px;
+  max-height:500px;
+}
+/* 改写codeMirror */
+.CodeMirror {
+  height: 700px  !important;
+}
+.vue-codemirror {
+  line-height: 20px ;
+}
+.container {
+  min-width: 910px;
+}
+.el-menu-item.is-active{
+  color:rgb(32, 160, 255) !important;
+}
+
+/* 面包屑位置 */
+.crumb-span{
+  font-weight: 700;
+  color: #3b8ee7;
+  cursor: pointer;
+}
+.el-table .cell{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap !important; 
+  text-overflow: ellipsis;
+}

@@ -1,9 +1,9 @@
 // 枚举
 export enum ColumTypes{
-  TEXT,
-  SELECTION,
-  BTNS,
-  ICON
+  TEXT='text',
+  SELECTION='selection',
+  BTNS='btns',
+  ICON='icon'
 }
 // 接口
 export interface searchHanderInterface{
@@ -39,7 +39,7 @@ export class TableOptions{
    * data字段为[{label, handler, action}]
    */
   static COLUMN_TYPE_BTNS: ColumTypes = ColumTypes.BTNS;
-
+  static COLUMN_TYPE_TEXT: ColumTypes = ColumTypes.TEXT;
   /**
    * 图标
    */

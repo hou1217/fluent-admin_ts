@@ -88,7 +88,7 @@
 <script lang="ts">
 import Vue from 'vue';
 
-import {TableOptions, ColumnOptions} from '../components/TableOptions'
+import {TableOptions, ColumnOptions,ColumTypes} from '../components/TableOptions'
 import MapUtils from '../../common/utils/MapUtils'
 const STATE_HIDDEN = "hidden";
 const STATE_SHOW = "show";
@@ -134,12 +134,12 @@ export default Vue.extend({
   created(){
 
     if(!this.options) throw "TableOptions对象为空，无法初始化";
+    console.log(ColumTypes);
     
-
     for(let column of this.options.columns){
-      
+      console.log(column.type);
       //获取选择列
-      if(column.type === TableOptions.COLUMN_TYPE_SELECTION){
+      if(column.type === ColumTypes.SELECTION){
         this.selectionColumn = column;
       }
       //累计用户定义的表格总尺寸

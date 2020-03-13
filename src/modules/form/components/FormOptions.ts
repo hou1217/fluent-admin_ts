@@ -17,7 +17,7 @@ export class FormOptions{
    */
   items: Array<FormItemOptions> = [];
 
-  showButton: boolean = false;
+  showButton: boolean = true;
 
   /**
    * 
@@ -34,11 +34,11 @@ export class FormItemOptions{
   /**
    * 元素类型,默认支持类型详见FormItemFactory.FormType
    */
-  type:string = FormType.TEXT;
+  type? = FormType.TEXT;
   /**
    * 组
    */
-  group: string = "";
+  group?: string = "";
   /**
    * 标签
    */
@@ -51,18 +51,18 @@ export class FormItemOptions{
    * 当有组的时候，存在
    * @type {Array<FormItemOptions>}
    */
-  subs: Array<FormItemOptions> = []
+  subs?: Array<FormItemOptions> = []
 
   /**
    * 针对不同类型自定义的一些数据
    */
-  data: object = {};
+  data?: object = {};
 
   /**
    * 规则集合
    * @type {Array<FormItemRuleOptions>}
    */
-  rules: Array<FormItemRuleOptions> = [];
+  rules?: Array<FormItemRuleOptions> = [];
 
   /**
    * @type {Function(newValue)}
