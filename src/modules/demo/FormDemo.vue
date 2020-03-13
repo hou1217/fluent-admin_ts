@@ -95,7 +95,7 @@
        */
       onSubmit(form) {
         console.log('[DemoEdit.vue]: onSubmit');
-        console.log(form);
+        alert(JSON.stringify(form));
       },
 
       refreshItems(items) {
